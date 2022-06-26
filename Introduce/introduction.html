@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="introduction.css">
+    <link rel="stylesheet" href="../Home/header-footer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Raleway:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+        <!-- fontawesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+        <link rel="stylesheet" href="Dependencies/bootstrap.css">
+        <link rel="stylesheet" href="Dependencies/font-awesome.min.css">
+        <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
+        <link rel = "shortcut icon" type="image/png" href="../Picture/logo-2.png" >    
+        <title>The Introduce</title>
+</head>
+<body>
+    
+    <header>
+        <div class="navigation-container">
+            <div class="tophead">
+                <div class="logo">
+                    <img src="../Picture/logo-2.png" alt="logo" width="80px" height="80px">
+ 
+                </div>
+
+                <div class="ham-btn" id="ham-btn" >
+                    <span>
+                        <i class="fas fa-bars" onclick="openMenu()"></i>
+                    </span>
+                </div>
+                <div class="times-btn" id=".times-btn">
+                   <span>
+                    <i class="fas fa-times"></i>
+                   </span>
+                </div>
+            </div>
+               <!-- nav bar -->
+
+               <div class="nav-bar" id="nav-bar">
+                    <nav>
+                        <ul>
+                            <li class="a1"><a href="../Home/index.html"><i class="fa fa-home"></i> Home</a></li>
+                            <li class="a2"><a href="../Introduce/introduction.html"><i class="fa fa-coffee"></i> Introduction</a></li>
+                            <li class="a3"><a href="../Product/coffee.html">Product <i class="fas fa-circle-chevron-down"></i></a>
+                                <ul class="da-cap">
+                                    <li><a href="../Product/coffee.html"><i class="fas fa-coffee"></i> Coffee</a></li>
+                                    <li><a href="../Product/milktea.html"><i class="fa-solid fa-mug-hot"></i> Milk tea</a></li>
+                                    <li><a href="../Product/milktea.html"><i class="fas fa-cocktail"></i> Juice</a></li>
+                                    <li><a href="../Product/milktea.html"><i class="fa-solid fa-bottle-droplet"></i> Orther drinks</a></li>
+                                </ul>
+                            </li>
+                            <li class="a4"><a href="../News/news.html"><i class="fa-solid fa-newspaper"></i> News</a></li>
+                            <li class="a5"><a style="cursor: pointer;" onclick="opensignin1()"><i class="fa-solid fa-circle-user"></i> Sign in</a></li>
+                        </ul>
+                    </nav>
+               </div>
+               <div class="social-bar">
+                    <ul>
+                        <li>
+                            <a href=""><i class="fab fa-facebook" id="child-1"></i></a>
+                        </li>
+                    
+                        <li>
+                            <a href=""><i class="fab fa-twitter" id="child-2"></i></a>
+                        </li>
+                    
+                        <li>
+                            <a href=""><i class="fab fa-instagram" id="child-3"></i></a>
+                        </li>
+                    
+                        <li>
+                            <a href=""><i class="fab fa-youtube" id="child-4"></i></a>
+                        </li>
+                    </ul>
+               </div>
+
+        </div>
+    </header>
+
+
+
+
+    <div id="content">
+        <div id="container">
+            <i class="fa-solid fa-circle-xmark" id="exit" onclick="exit()"></i>
+            <form action="" class="sign-in" id="signin" align="center" name="myForm">
+                <h2 class="title">Sign in</h2>
+            
+                    <div class="form-group">
+                        <div class="input-field">
+                            <i class="fas fa-user"></i>
+                            <input type="text" placeholder="Username" id="fullname" onkeypress="return ischarkey(event)">
+                            <!-- <p>Hello</p> -->
+                        </div>
+                        <span class="form-mess"></span>
+                    </div>
+
+                    <!-- <span>Hello</span> -->
+                
+                <!-- <p>Hello</p> -->   
+                <div class="form-group">
+                    
+                    <div class="input-field">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" placeholder="Password" id="password">
+                        <span id="eye"><i class="fa-solid fa-eye" id="open" onclick="openpass()"></i>
+                            <i class="fa-solid fa-eye-slash" id="close" onclick="closepass()"></i></span>
+                    </div>
+                    <span class="form-mess"></span>
+                
+                </div>
+                <input type="submit" value="Login" class="btnn">
+                <p class="social-text">Or Sign in with social platform</p>
+                <div class="social-media">
+                    <a href="" class="social-icon"><i class="fab fa-facebook"></i></a>
+                    <a href="" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="" class="social-icon"><i class="fab fa-google"></i></a>
+                </div>
+                <p class="account-text">Don't have an account? <a id="sign-up-btn2" onclick="opensignoutclosesignin()" style="font-weight: 800;">Sign up</a></p>
+            </form>
+
+            <form action="" class="sign-up" id="signup" align="center">
+                <h2 class="title">Sign up</h2>
+                <div class="form-group">
+                    <div class="input-field">
+                        <i class="fas fa-user"></i>
+                        <input type="text" placeholder="Username" id="fullname" onkeypress="return ischarkey(event)">
+                        <!-- <p>Hello</p> -->
+                    </div>
+                    <span class="form-mess"></span>
+                </div>
+
+                <div class="form-group">
+                    <div class="input-field">
+                        <i class="fas fa-envelope"></i>
+                        <input type="text" placeholder="Email" id="Email" >
+                        <!-- <p>Hello</p> -->
+                    </div>
+                    <span class="form-mess"></span>
+                </div>
+                
+                <div class="form-group">
+                    <div class="input-field">
+                        <i class="fas fa-phone"></i>
+                        <input type="text" placeholder="Phone" id="phone" >
+                        <!-- <p>Hello</p> -->
+                    </div>
+                    <span class="form-mess"></span>
+                </div>
+                                     
+                <div class="form-group">
+                    
+                    <div class="input-field">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" placeholder="Password" id="password1">
+                        <span id="eye"><i class="fa-solid fa-eye" id="open1" onclick="openpass1()"></i>
+                            <i class="fa-solid fa-eye-slash" id="close1" onclick="closepass1()"></i></span>
+                    </div>
+                    <span class="form-mess"></span>
+                
+                </div>
+                <input type="submit" value="Sign up" class="btnn">
+                <p class="social-text">Or Sign in with social platform</p>
+                <div class="social-media">
+                    <a href="" class="social-icon"><i class="fab fa-facebook"></i></a>
+                    <a href="" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="" class="social-icon"><i class="fab fa-google"></i></a>
+                </div>
+                <p class="account-text">Already have an account? <a  id="sign-in-btn2" onclick="opensigninclosesignout()" style="font-weight: 800;">Sign in</a></p>
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="content">
+        <div class="your-sweat">
+
+            <div class="short-text">
+                <span>Pleasure</span>
+                <p>Whether for its signature drink. Hediard pays particular attention to the choice of product that make up its small sweets</p>
+
+            </div>
+
+           
+            <div class="big-image">
+                <img src="https://i.pinimg.com/originals/5d/78/3f/5d783f2578671662285790b9085e2c77.gif" alt="big">
+            </div>
+                
+
+        </div>
+
+
+
+        <div class="about-us">
+
+
+            <div class="image">
+                <img src="https://i.pinimg.com/originals/16/08/f1/1608f1dc92d93407835aaf2efde1a031.gif">
+            </div>
+
+
+            <div class="text">
+                <span>About us</span>
+                <p>When in New Paltz, don't miss a trip to The Bakery. Residents consider The Bakery, with its rustic outdoor cafe and beautiful gardens, to be the center of social life in New Paltz, a place to meet people, bump into old friends, or sit quietly and read the papers. </p>
+            </div>
+
+
+        </div>
+
+
+
+        <div class="menu">
+
+
+
+            <div class="text">
+                <i class="fas fa-coffee"></i> <br>
+                <span>TheCoffee.</span>
+                <p>Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.</p>
+            </div>
+            <div class="text">
+                <i class="fa-solid fa-mug-hot"></i> <br>
+                <span>TheMilkteal.</span>
+                <p>Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.</p>
+            </div>
+            <div class="text">
+                <i class="fas fa-cocktail"></i> <br>
+                <span>TheJuice.</span>
+                <p>Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.</p>
+            </div>
+            <div class="text">
+                <i class="fa-solid fa-bottle-droplet"></i><br>
+                <span>TheOtherdrink.</span>
+                <p>Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.</p>
+            </div>
+            <div class="text">
+                <i class="fa-solid fa-bell-concierge"></i><br>
+                <span>Service</span>
+                <p>Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.</p>
+            </div>
+            <div class="text">
+                <i class="fa-solid fa-truck"></i><br>
+                <span>Delivery</span>
+                <p>Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.</p>
+            </div>
+        </div>
+
+
+
+
+        <div class="our-product">
+            <!-- <span>Our products</span> -->
+            <span>Our products</span>
+            <div class="row">
+                    <img src="https://i.pinimg.com/564x/25/e8/b9/25e8b98489b4fde1268864f5d647821a.jpg">
+                    <img src="https://i.pinimg.com/736x/c5/96/17/c59617bcd2294d8fc6c703a99d8b0d3e.jpg">
+                    <img src="https://i.pinimg.com/564x/1d/52/2e/1d522ede5b735a670258c33a564a849a.jpg" >
+                    <img src="https://i.pinimg.com/564x/c0/00/f9/c000f943be36424f9463b87740223bc8.jpg">
+                    <img src="https://i.pinimg.com/564x/cd/fb/3a/cdfb3a4c3fdde28b9a3717ad4f18ca2f.jpg">
+                    <img src="https://i.pinimg.com/564x/ed/11/ff/ed11ffc2a1aaaa8766296b024ddc9a1f.jpg">
+              
+            </div>
+
+        </div>
+
+
+
+
+
+        <div class="contact">
+            <div class="contact-item">
+                <span>Contact us </span>
+                <p><i class="fa-regular fa-address-card"></i>  Apostolia Nasiopoulou <br>
+                    <i class="fas fa-map-location-dot"></i>   Katapola, Amorgos 84008, Greece<br> 
+                    <i class="fas fa-square-phone"></i>  +30 22850 71554,<br>
+                    <i class="fas fa-envelope-circle-check"></i>  info@sweets.com</p>
+            </div>
+            
+            <div class="contact-item">
+                <div class="container">
+                    <div class="cards">
+                        <div class="imgBx">
+                                <img src="https://scontent.fdad1-1.fna.fbcdn.net/v/t1.6435-1/147722386_810713466180136_8353830608644485338_n.jpg?stp=c0.0.320.320a_dst-jpg_p320x320&_nc_cat=103&ccb=1-7&_nc_sid=7206a8&_nc_ohc=lxsh_Mr35yYAX9tRg9u&_nc_ht=scontent.fdad1-1.fna&oh=00_AT9RcpEHx3qWEzX_OQhgcqG9yVrrALz0MyvYX6jyS5iZeg&oe=62CC2B2C">
+                        </div>
+                        <div class="content-contact">
+                            <div class="details">
+                                <h2>Nguyễn Văn Vĩnh Nguyên</h2>
+                                <ul class="social-icon1">
+                                    <li><a href="#"><i class="fa fa-facebook"  aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                </ul>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="cards">
+                        <div class="imgBx">
+                            <img src="../Picture/meo1.jpg">
+                        </div>
+                        <div class="content-contact">
+                            <div class="details">
+                                <h2>Lê Anh Thư</h2>
+                                <ul class="social-icon1">
+                                <li><a href="#"><i class="fa fa-facebook"  aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </div> 
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+<footer>
+    <div class="footer">
+        <div class="con">
+            <div class="sec aboutus" id="nguyen">
+                <h2>ABOUT US</h2>
+                    
+                    <h3>The Noble Shop</h3>
+                    <p>In the spirit of respect, reciprocity and truth, we honour and acknowledge that we live. All of our products are carefully selected from the raw material stage to help the product achieve the best quality.</p>
+                
+                <ul class="icon">
+                    <li><a href=""><i class="fab fa-facebook" id="child-1"></i></a></li>
+                    <li><a href=""><i class="fab fa-twitter" id="child-2"></i></a></li>
+                    <li><a href=""><i class="fab fa-instagram" id="child-3"></i></a></li>
+                    <li><a href=""><i class="fab fa-youtube" id="child-4"></i></a></li>
+                </ul>
+            </div>
+
+            <div class="sec quicklink" id="nguyen">
+                <h2>
+                    Quick Links
+                </h2>
+                <ul>
+                    <li><a href="../Policy/Policy.html">Warranty Policy</a></li>
+                    <li><a href="../Policy/Policy.html">Payment Policy</a></li>
+                    <li><a href="../CONTACT/index.html">Contact Us</a></li>
+                    <li><a href="../PRODUCT/index.html">Product</a></li>
+                    <li><a onclick="opensignin()">Sign in</a></li>
+                </ul>
+            </div>
+
+            <div class="sec quicklink" id="nguyen">
+                <h2>Newletter</h2>
+                <p>You can write comments about our website in this section.</p>
+                <div class="email">
+                    <div>
+                        <input type="text" placeholder="Email address">
+                    </div>
+                    <button class="btn1">GET NOTIFICATION</button>
+                </div>
+            </div>
+            
+            <div class="sec quicklink" id="nguyen">
+                <h2>Contact Us</h2>
+                <div class="address" >
+                    <ul>
+                        <li>
+                            <span><i class="fas fa-map-marker"></i></span>
+                            <span>470 Tran Dai Nghia, <br> Ngu Hanh Son, DaNang, <br> VietNam</span>
+                        </li>
+                        <li>
+                            <span><i class="fas fa-phone"></i></span>
+                            <span> 0839519415</span>
+                            
+                        </li>
+                        <li>
+                            <span><i class="fas fa-envelope"></i></span>
+                            <span>nguyennvv.21it@vku.udn.vn </span>
+                        
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright"> <p>Copyright &copy; 2022 The Noble || The famous shop drink for everyone</p> </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+<script src="../Home/main.js"></script>
+<script src="../chucnang.js"></script>
+<script src="../Validator.js"></script>
+<script>
+    Validator({
+        form: '#signin',
+        errorSelector: '.form-mess',
+
+        rules:[
+        Validator.isRequired('#fullname')
+        ,Validator.isPassword('#password', 6)
+        
+        ]
+    });
+    Validator({
+        form: '#signup',
+
+        errorSelector: '.form-mess',
+        rules:[
+            Validator.isRequired('#fullname')
+            ,Validator.isEmail('#Email')
+            ,Validator.isPassword('#password1', 6)
+        ]
+    });
+
+</script>
+</html>
+
+
+
+

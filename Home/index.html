@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Home/header-footer.css">
+    <link rel="stylesheet" href="style.css">
+   
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Raleway:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+        <!-- fontawesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+        <link rel="stylesheet" href="Dependencies/bootstrap.css">
+        <link rel="stylesheet" href="Dependencies/font-awesome.min.css">
+        <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
+    <link rel = "shortcut icon" type="image/png" href="../Picture/logo-2.png" >    
+    <title>The Home</title>
+</head>
+<body>
+    <header>
+        <div class="navigation-container">
+            <div class="tophead">
+                <div class="logo">
+                    <img src="../Picture/logo-2.png" alt="logo" width="80px" height="80px">
+ 
+                </div>
+
+                <div class="ham-btn" id="ham-btn" >
+                    <span>
+                        <i class="fas fa-bars" onclick="openMenu()"></i>
+                    </span>
+                </div>
+                <div class="times-btn" id=".times-btn">
+                   <span>
+                    <i class="fas fa-times"></i>
+                   </span>
+                </div>
+            </div>
+               <!-- nav bar -->
+
+               <div class="nav-bar" id="nav-bar">
+                    <nav>
+                        <ul>
+                            <li class="a1"><a href="../Home/index.html"><i class="fa fa-home"></i> Home</a></li>
+                            <li class="a2"><a href="../Introduce/introduction.html"><i class="fa fa-coffee"></i> Introduction</a></li>
+                            <li class="a3"><a href="../Product/coffee.html">Product <i class="fas fa-circle-chevron-down"></i></a>
+                                <ul class="da-cap">
+                                    <li><a href="../Product/coffee.html"><i class="fas fa-coffee"></i> Coffee</a></li>
+                                    <li><a href="../Product/milktea.html"><i class="fa-solid fa-mug-hot"></i> Milk tea</a></li>
+                                    <li><a href="../Product/milktea.html"><i class="fas fa-cocktail"></i> Juice</a></li>
+                                    <li><a href="../Product/milktea.html"><i class="fa-solid fa-bottle-droplet"></i> Orther drinks</a></li>
+                                </ul>
+                            </li>
+                            <li class="a4"><a href="../News/news.html"><i class="fa-solid fa-newspaper"></i> News</a></li>
+                            <li class="a5"><a style="cursor: pointer;" onclick="opensignin1()"><i class="fa-solid fa-circle-user"></i> Sign in</a></li>
+                        </ul>
+                    </nav>
+               </div>
+               <div class="social-bar">
+                    <ul>
+                        <li>
+                            <a href=""><i class="fab fa-facebook" id="child-1"></i></a>
+                        </li>
+                    
+                        <li>
+                            <a href=""><i class="fab fa-twitter" id="child-2"></i></a>
+                        </li>
+                    
+                        <li>
+                            <a href=""><i class="fab fa-instagram" id="child-3"></i></a>
+                        </li>
+                    
+                        <li>
+                            <a href=""><i class="fab fa-youtube" id="child-4"></i></a>
+                        </li>
+                    </ul>
+               </div>
+
+        </div>
+    </header>
+
+
+
+
+
+    <div id="content">
+        <div id="container">
+            <i class="fa-solid fa-circle-xmark" id="exit" onclick="exit()"></i>
+            <form action="" class="sign-in" id="signin" align="center" name="myForm">
+                <h2 class="title">Sign in</h2>
+            
+                    <div class="form-group">
+                        <div class="input-field">
+                            <i class="fas fa-user"></i>
+                            <input type="text" placeholder="Username" id="fullname" onkeypress="return ischarkey(event)">
+                            <!-- <p>Hello</p> -->
+                        </div>
+                        <span class="form-mess"></span>
+                    </div>
+
+                    <!-- <span>Hello</span> -->
+                
+                <!-- <p>Hello</p> -->   
+                <div class="form-group">
+                    
+                    <div class="input-field">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" placeholder="Password" id="password">
+                        <span id="eye"><i class="fa-solid fa-eye" id="open" onclick="openpass()"></i>
+                            <i class="fa-solid fa-eye-slash" id="close" onclick="closepass()"></i></span>
+                    </div>
+                    <span class="form-mess"></span>
+                
+                </div>
+                <input type="submit" value="Login" class="btnn">
+                <p class="social-text">Or Sign in with social platform</p>
+                <div class="social-media">
+                    <a href="" class="social-icon"><i class="fab fa-facebook"></i></a>
+                    <a href="" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="" class="social-icon"><i class="fab fa-google"></i></a>
+                </div>
+                <p class="account-text">Don't have an account? <a id="sign-up-btn2" onclick="opensignoutclosesignin()" style="font-weight: 800;">Sign up</a></p>
+            </form>
+
+            <form action="" class="sign-up" id="signup" align="center">
+                <h2 class="title">Sign up</h2>
+                <div class="form-group">
+                    <div class="input-field">
+                        <i class="fas fa-user"></i>
+                        <input type="text" placeholder="Username" id="fullname" onkeypress="return ischarkey(event)">
+                        <!-- <p>Hello</p> -->
+                    </div>
+                    <span class="form-mess"></span>
+                </div>
+
+                <div class="form-group">
+                    <div class="input-field">
+                        <i class="fas fa-envelope"></i>
+                        <input type="text" placeholder="Email" id="Email" >
+                        <!-- <p>Hello</p> -->
+                    </div>
+                    <span class="form-mess"></span>
+                </div>
+                
+                <div class="form-group">
+                    <div class="input-field">
+                        <i class="fas fa-phone"></i>
+                        <input type="text" placeholder="Phone" id="phone" >
+                        <!-- <p>Hello</p> -->
+                    </div>
+                    <span class="form-mess"></span>
+                </div>
+                                     
+                <div class="form-group">
+                    
+                    <div class="input-field">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" placeholder="Password" id="password1">
+                        <span id="eye"><i class="fa-solid fa-eye" id="open1" onclick="openpass1()"></i>
+                            <i class="fa-solid fa-eye-slash" id="close1" onclick="closepass1()"></i></span>
+                    </div>
+                    <span class="form-mess"></span>
+                
+                </div>
+                <input type="submit" value="Sign up" class="btnn">
+                <p class="social-text">Or Sign in with social platform</p>
+                <div class="social-media">
+                    <a href="" class="social-icon"><i class="fab fa-facebook"></i></a>
+                    <a href="" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="" class="social-icon"><i class="fab fa-google"></i></a>
+                </div>
+                <p class="account-text">Already have an account? <a  id="sign-in-btn2" onclick="opensigninclosesignout()" style="font-weight: 800;">Sign in</a></p>
+            </form>
+        </div>
+    </div>
+
+
+
+    <div class="content">
+
+        <section class="home" id="home">
+            <div class="content1">
+                <h3>Drink made with love</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis doloremque optio, magnam eum quam blanditiis placeat fugit provident consequuntur architecto suscipit aut ut nobis veritatis veniam perferendis! Repellat, aspernatur voluptatibus!</p>
+                <a href="" class="btn">Go to</a>
+            </div>
+            <div class="image">
+                <img src="../Picture/image.webp" alt="">
+            </div>
+        </section>
+
+        <!-- <hr> -->
+
+
+        <section class="speciality" id="speciality">
+
+            <div class="hehe"><h1 class="heading"> our <span>speciality</span> </h1></div>
+        
+            <div class="box-container">
+        
+                <div class="box">
+                    <img class="image" src="../Picture/coffee2-1.jpg" alt="">
+                    <div class="content">
+                        <img src="../Picture/coffee-cup.png" alt="">
+                        <h3>Tasty Coffee</h3>
+                        <p>Coffee is a brewed drink prepared from roasted coffee beans, the seeds of berries from certain flowering plants in the Coffea genus.</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <img class="image" src="../Picture/juice.jpg" alt="">
+                    <div class="content">
+                        <img src="../Picture/fruit.png" alt="">
+                        <h3>Tasty Juice</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda inventore neque amet ipsa tenetur voluptates aperiam tempore libero labore aut.</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <img class="image" src="../Picture/trasua1.jpg" alt="">
+                    <div class="content">
+                        <img src="../Picture/bubble-tea.png" alt="">
+                        <h3>Milk tea</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda inventore neque amet ipsa tenetur voluptates aperiam tempore libero labore aut.</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <img class="image" src="../Picture/gas-drink1.jpg" alt="">
+                    <div class="content">
+                        <img src="../Picture/soft-drink.png" alt="">
+                        <h3>Cold drinks</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda inventore neque amet ipsa tenetur voluptates aperiam tempore libero labore aut.</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <img class="image" src="../Picture/wine.jpg" alt="">
+                    <div class="content">
+                        <img src="../Picture/wine.png" alt="">
+                        <h3>Wine</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda inventore neque amet ipsa tenetur voluptates aperiam tempore libero labore aut.</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <img class="image" src="../Picture/tea.jpg" alt="">
+                    <div class="content">
+                        <img src="../Picture/green-tea.png" alt="">
+                        <h3>Tea</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda inventore neque amet ipsa tenetur voluptates aperiam tempore libero labore aut.</p>
+                    </div>
+                </div>
+                
+            </div>
+        
+        </section>
+
+
+
+
+
+
+
+        <div class="coffee">
+            <div class="tieude-1">
+                
+                <div class="tieude1-1">
+                    <h1>THE COFFEE.</h1>
+                    <p>Distinct specialty coffee blends with a range of complex, vibrant flavours. Whoever you are, we have your favourite drink.</p>
+                    <hr>
+                </div>
+            </div>
+
+            
+
+            <div class="menu-coffee">
+
+                <div class="card">
+                    <div class="image-1">
+                        <img src="../Picture/black-coffee1-1.jpg" alt="">
+                        <div class="i">
+                            <div class="div-1"><i class="fa-solid fa-heart" id="i-1"></i></div> 
+                            <div class="div-1">
+                            <i class="fa-solid fa-plus" id="i-2"></i>
+                            </div> 
+                            <div class="div-1"><i class="fa-solid fa-cart-shopping" id="i-3"></i></div>
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <h2><i class="fas fa-coffee"></i> Adore Coffee darkwolf</h2>
+                        <p><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i></p>
+                        <h4>Price: <span>$15.50-$45.00</span></h4>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="image-1">
+                        <img src="../Picture/black-coffee1-3.jpg" alt="">
+                        <div class="i">
+                            <div class="div-1"><i class="fa-solid fa-heart" id="i-1"></i></div> 
+                            <div class="div-1">
+                            <i class="fa-solid fa-plus" id="i-2"></i>
+                            </div> 
+                            <div class="div-1"><i class="fa-solid fa-cart-shopping" id="i-3"></i></div>
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <h2><i class="fas fa-coffee"></i> Adore Florito blend</h2>
+                        <p><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i></p>
+                        <h4>Price: <span>$15.50-$45.00</span></h4>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="image-1">
+                        <img src="../Picture/black-coffee1-2.jpg" alt="">
+                        <div class="i">
+                            <div class="div-1"><i class="fa-solid fa-heart" id="i-1"></i></div> 
+                            <div class="div-1">
+                            <i class="fa-solid fa-plus" id="i-2"></i>
+                            </div> 
+                            <div class="div-1"><i class="fa-solid fa-cart-shopping" id="i-3"></i></div>
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <h2><i class="fas fa-coffee"></i> Adore Mastro blend</h2>
+                        <p><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i></p>
+                        <h4>Price: <span>$15.50-$45.00</span></h4>
+                    </div>
+                </div>
+
+                
+
+            </div>
+            
+
+            <div class="button">
+                <a href="" class="btn">See more</a>
+            </div>
+
+
+            
+        </div>
+       
+
+        <div class="slide">
+            <div class="title-slide">
+                <h1>Single Origin Drink.</h1>
+                <p>Experience the world in every cup</p>
+            </div>
+            <hr>
+            <marquee behavior="alternate" direction="">
+                <img src="../Picture/slide1-1.jpg" alt="">
+                <img src="../Picture/slide1-2.jpg" alt="">
+
+                <img src="../Picture/slide1-3.jpg" alt="">
+
+                <img src="../Picture/slide1-4.jpg" alt="">
+
+                <img src="../Picture/slide1-8.jpg" alt="">
+
+                <img src="../Picture/slide1-9.jpg" alt="">
+                <img src="../Picture/slide1-10.jpg" alt="">
+
+
+            </marquee>
+            <hr>
+        </div>
+
+
+        <div class="milk-tea">
+            <div class="tieude-1">
+                
+                <div class="tieude1-1">
+                    <h1>THE MILKTEA.</h1>
+                    <p>We scoured the world to find the best coffees a home. Yours.
+                    </p>
+                    <hr>
+                </div>
+            </div>
+
+            <div class="menu-milktea">
+
+                <div class="card">
+                    <div class="image-1">
+                        <img src="../Picture/milktea1.jpg" alt="">
+                        <div class="i">
+                            <div class="div-1"><i class="fa-solid fa-heart" id="i-1"></i></div> 
+                            <div class="div-1">
+                            <i class="fa-solid fa-plus" id="i-2"></i>
+                            </div> 
+                            <div class="div-1"><i class="fa-solid fa-cart-shopping" id="i-3"></i></div>
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <h2><i class="fas fa-coffee"></i> Black sugar pearl milktea</h2>
+                        <p><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i></p>
+                        <h4>Price: <span>$1.20</span></h4>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="image-1">
+                        <img src="../Picture/milktea2.jpg" alt="">
+                        <div class="i">
+                            <div class="div-1"><i class="fa-solid fa-heart" id="i-1"></i></div> 
+                            <div class="div-1">
+                            <i class="fa-solid fa-plus" id="i-2"></i>
+                            </div> 
+                            <div class="div-1"><i class="fa-solid fa-cart-shopping" id="i-3"></i></div>
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <h2><i class="fas fa-coffee"></i> Cream cheese milktea</h2>
+                        <p><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i></p>
+                        <h4>Price: <span>$1.50</span></h4>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="image-1">
+                        <img src="../Picture/milktea3.jpg" alt="">
+                        <div class="i">
+                            <div class="div-1"><i class="fa-solid fa-heart" id="i-1"></i></div> 
+                            <div class="div-1">
+                            <i class="fa-solid fa-plus" id="i-2"></i>
+                            </div> 
+                            <div class="div-1"><i class="fa-solid fa-cart-shopping" id="i-3"></i></div>
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <h2><i class="fas fa-coffee"></i> Black chemistry milktea</h2>
+                        <p><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i></p>
+                        <h4>Price: <span>$2.00</span></h4>
+                    </div>
+                </div>
+
+                
+
+            </div>
+            
+
+            <div class="button">
+                <a href="" class="btn">See more</a>
+            </div>
+
+
+            
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+    <footer>
+        <div class="footer">
+            <div class="con">
+                <div class="sec aboutus" id="nguyen">
+                    <h2>ABOUT US</h2>
+                        
+                        <h3>The Noble Shop</h3>
+                        <p>In the spirit of respect, reciprocity and truth, we honour and acknowledge that we live. All of our products are carefully selected from the raw material stage to help the product achieve the best quality.</p>
+                    
+                    <ul class="icon">
+                        <li><a href=""><i class="fab fa-facebook" id="child-1"></i></a></li>
+                        <li><a href=""><i class="fab fa-twitter" id="child-2"></i></a></li>
+                        <li><a href=""><i class="fab fa-instagram" id="child-3"></i></a></li>
+                        <li><a href=""><i class="fab fa-youtube" id="child-4"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="sec quicklink" id="nguyen">
+                    <h2>
+                        Quick Links
+                    </h2>
+                    <ul>
+                        <li><a href="../Policy/Policy.html">Warranty Policy</a></li>
+                        <li><a href="../Policy/Policy.html">Payment Policy</a></li>
+                        <li><a href="../CONTACT/index.html">Contact Us</a></li>
+                        <li><a href="../PRODUCT/index.html">Product</a></li>
+                        <li><a onclick="opensignin()">Sign in</a></li>
+                    </ul>
+                </div>
+
+                <div class="sec quicklink" id="nguyen">
+                    <h2>Newletter</h2>
+                    <p>You can write comments about our website in this section.</p>
+                    <div class="email">
+                        <div>
+                            <input type="text" placeholder="Email address">
+                        </div>
+                        <button class="btn1">GET NOTIFICATION</button>
+                    </div>
+                </div>
+                
+                <div class="sec quicklink" id="nguyen">
+                    <h2>Contact Us</h2>
+                    <div class="address" >
+                        <ul>
+                            <li>
+                                <span><i class="fas fa-map-marker"></i></span>
+                                <span>470 Tran Dai Nghia, <br> Ngu Hanh Son, DaNang, <br> VietNam</span>
+                            </li>
+                            <li>
+                                <span><i class="fas fa-phone"></i></span>
+                                <span> 0839519415</span>
+                                
+                            </li>
+                            <li>
+                                <span><i class="fas fa-envelope"></i></span>
+                                <span>nguyennvv.21it@vku.udn.vn </span>
+                            
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright"> <p>Copyright &copy; 2022 The Noble || The famous shop drink for everyone</p> </div>
+    </footer>
+
+
+</body>
+<script src="/Cuoiki/Home/main.js"></script>
+<script src="../chucnang.js"></script>
+<script src="../Validator.js"></script>
+<script>
+    Validator({
+        form: '#signin',
+        errorSelector: '.form-mess',
+
+        rules:[
+        Validator.isRequired('#fullname')
+        ,Validator.isPassword('#password', 6)
+        
+        ]
+    });
+    Validator({
+        form: '#signup',
+
+        errorSelector: '.form-mess',
+        rules:[
+            Validator.isRequired('#fullname')
+            ,Validator.isEmail('#Email')
+            ,Validator.isPassword('#password1', 6)
+        ]
+    });
+
+</script>
+</html>

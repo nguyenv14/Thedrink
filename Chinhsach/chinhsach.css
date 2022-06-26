@@ -1,0 +1,146 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.exchange-head{
+    display:flex;
+    flex-wrap: wrap;
+    padding-top: 200px;
+    text-align: center;
+}
+.exchange-head-item{
+    flex:32.5%;
+}
+.exchange-head-item .text{
+    margin-top:10px;
+}
+.exchange-head-item span{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-size: black;
+    
+} 
+.exchange-head-item span:hover{
+    color:#0d89f0;
+    border-bottom:1px solid black;
+}
+.exchange-head-item .text p{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+}
+.exchange-head-item .text a{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+}
+.three-stage{
+    margin-top: 70px;
+    text-align: center;
+}
+.three-stage span{
+    /* color:white; */
+    font-style: italic;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    text-shadow: 5px 5px 10px #0d89f0;
+}
+.three-stage span:hover{
+    text-shadow: 5px 5px 10px #0d89f0;
+}
+.three-stage-content {
+    display:flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-evenly;
+
+}
+.three-stage-content-item{
+    width:305.29px;
+    height:220px;
+    border: 3px solid #0d89f0;
+    border-radius: 20px;
+   
+    margin-top:30px;
+}
+.three-stage-content-item:hover{
+    box-shadow:5px 5px 10px #0d89f0 ;
+}
+.three-stage-content-item img{
+    width:164px;
+    height:166px;
+}
+.three-stage-content-item .content-text{
+    margin-top: 10px;
+}
+.three-stage-content-item .content-text span{
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    color:#0d89f0;
+}
+.three-stage-content-item .content-text  p{
+    font-family: 'Times New Roman', Times, serif;
+}
+.detail-pay{
+    margin-top: 70px;
+    
+}
+.detail-pay-head{
+    text-align: center;
+}
+.detail-pay-head span{
+    /* color:white; */
+    font-style: italic;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    text-shadow: 5px 5px 10px #0d89f0;
+}
+.detail-pay-item{
+    float:left;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-left:100px;
+    line-height: 50px;
+    margin-top:20px;
+    margin-bottom: 40px;
+}
+
+.detail-pay-item ul {
+    list-style: inside;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

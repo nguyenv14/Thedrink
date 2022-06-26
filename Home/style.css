@@ -1,0 +1,552 @@
+.home{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    min-height: 100vh;
+    align-items: center;
+    background: url(../Picture/home-bg.jpg) no-repeat;
+    background-size: cover;
+}
+*{
+  scroll-behavior: smooth;
+}
+.home .content1{
+    flex: 1 1 40rem;
+    padding-top: 6.5rem;
+    padding-left: 3.2rem;
+}
+
+.home .image{
+    flex: 1 1 40rem;
+}
+
+.home .image img{
+    width: 70%;
+    margin-left: 10%;
+    animation: float 3s linear infinite;
+    
+}
+
+@keyframes float{
+    0%, 100%{
+        transform: translateY(0rem);
+    }
+    50%{
+        transform: translateY(3rem);
+    }
+}
+
+.home .content1 h3{
+    font-size: 3rem;
+    color: slategray;
+}
+
+.home .content1 p{
+    font-size: 1.4rem;
+    color: #333;
+}
+
+.btn{
+    display: inline-block;
+    padding: 15px 28px;
+    border:0.2rem solid red;
+    color:red;
+    cursor: pointer;
+    font-size: 22px;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    margin-top: 5px;
+    transition: 0.5s;
+  }
+  
+  .btn::before{
+    content: '';
+    position: absolute;
+    top:0; right: 0;
+    width:0%;
+    height:100%;
+    background:red;
+    transition: .3s linear;
+    z-index: -1;
+  }
+  
+  .btn:hover::before{
+    width:100%;
+    left: 0;
+  }
+  
+  .btn:hover{
+    color:#fff;
+    box-shadow: 0 0 10px red;
+    transition: 0.5s;
+  }
+
+  .coffee{
+    border: 5px solid #333;
+    border-radius: 10px;
+  }
+
+.coffee .tieude1-1{
+  margin: 30px auto;
+  text-align: center;
+}
+
+
+.coffee .tieude-1 .tieude1-1 p{
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.coffee .tieude-1 .tieude1-1 hr{
+    width: 60%;
+    margin-top: 20px;
+    height: 5px;
+    border: none;
+    background: #333;
+}
+
+.coffee .menu-coffee{
+    display: grid;
+    
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.coffee .menu-coffee .card{
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    transition: 0.5s;
+}
+
+.coffee .menu-coffee .card .image-1{ 
+  display: grid;
+  grid-template-columns: 5fr 0.5fr;
+}
+
+.coffee .menu-coffee .card:hover{
+  transform: scale(1.04);
+  transition: 0.5s;
+}
+
+.coffee .menu-coffee .card .detail h4 span{
+  color: red;
+  
+}
+
+
+
+.coffee .menu-coffee .card .detail{
+  text-align: center;
+  /* margin-top: 20px; */
+  /* margin: 0 auto; */
+  margin-right: 30px;
+}
+
+.coffee .menu-coffee .card .detail  h2{
+  margin: 10px 0;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+.coffee .menu-coffee .card .detail  h2 i{
+  color: brown;
+}
+
+.coffee .menu-coffee .card .detail  p{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.coffee .menu-coffee .card .detail h4{
+  margin-bottom: 20px;
+}
+
+.coffee .menu-coffee .card .image-1 img{
+  width: 100%;
+  height: 300px;
+  object-fit: cover ;  
+  display: flex;
+}
+
+.coffee .menu-coffee .card .image-1 .i{
+  margin-top: 80px;
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: 0.2s;
+  z-index: 0;
+}
+
+.coffee .menu-coffee .card .image-1 .i .div-1{
+    width: 40px;
+    height: 40px;
+    border: 3px solid #333;
+    text-align: center;
+    background: rgb(0, 0, 0);
+    color: #fff;
+}
+
+.coffee .menu-coffee .card:hover .image-1 .i{
+  opacity: 1;
+  transform: translate(0);
+  transition: 0.2s;
+}
+
+.coffee .menu-coffee .card .image-1 .i .div-1:hover{
+  background: #fff;
+  color: #000;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.coffee .menu-coffee .card .image-1 .i .div-1 i{
+    margin: 10px 0;
+}
+
+.coffee .menu-coffee .card .image-1{
+  margin: 0 auto;
+  width: 80%;
+}
+
+.coffee .menu-coffee .card:hover .detail p{
+  color: chocolate;
+}
+
+.coffee .menu-coffee .card:hover .image-1 img{
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 10px;
+}
+
+.coffee .button{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+
+
+
+
+.speciality{
+  background: url(../Picture/back-2.jpg);
+  border-top: 5px solid #333;
+  border-radius: 10px;
+}
+
+.speciality .hehe{
+  width: 500px;
+  border: 4px solid rgb(255, 0, 0);
+  margin: 20px auto;
+  background: #fff;
+  transition: 0.5s;
+}
+
+.speciality:hover .hehe{
+  transform: skew(-25deg);
+  transition: 0.5s;
+}
+
+.heading{
+  text-align: center;
+  font-size: 3.5rem;
+  padding:1rem;
+  color:#666;
+}
+
+.heading span{
+  color:red;
+}
+
+.speciality .box-container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* gap:1.5rem; */
+  width: 100%;
+  /* background: url(../Picture/back-2.jpg); */
+  /* margin: 20px auto; */
+  /* box-shadow: 0 0 10px rgb(0, 0, 0); */
+}
+
+.speciality .box-container .box{
+  position: relative;
+  overflow: hidden;
+  /* box-shadow: -10px -10px 10px rgb(0, 0, 0), 10px 10px 10px rgb(0, 0, 0); */
+  /* border: 2px solid rgba(0,0,0,.3); */
+  box-shadow: 0 0 10px #333;
+  cursor: pointer;
+  border-radius: 10px;
+  height: 300px;
+  width: 90%;
+  margin: 20px auto;
+  /* transition: 1.5s; */
+}
+
+
+
+.speciality .box-container .box .image{
+  height: 300px;
+  width:100%;
+  object-fit: cover;
+  position: absolute;
+  top:-100%; 
+  left:0;
+  transition: 0.4s;
+}
+
+.speciality .box-container .box .content{
+  text-align: center;
+  background:#fff;
+  transition: 0.4s;
+  width: 100%;
+  height: 300px; 
+}
+
+.speciality .box-container .box .content img{
+  margin: 30px auto;
+  width: 50px;
+}
+
+.speciality .box-container .box .content h3{
+  font-size: 30px;
+  color:rgb(54, 53, 53);
+}
+
+.speciality .box-container .box .content p{
+  font-size: 20px;
+  color:rgb(0, 0, 0);
+  padding:1rem 0;
+}
+
+.speciality .box-container .box:hover .image{
+  top:0;
+  transition: 0.4s;
+}
+
+.speciality .box-container .box:hover .content{
+  transform: translateY(100%);
+  transition: 0.5s;
+}
+
+
+
+
+@media (max-width:1200px) {
+  .speciality .box-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width:600px) {
+  .heading{
+    /* width: 300px !important; */
+    font-size: 30px;
+
+    padding: 15px !important;
+  } 
+  .speciality .hehe{
+    width: 70%;
+  }
+  .speciality .box-container{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.slide .title-slide {
+  font-family: 'Brush Script MT';
+  text-align: center;
+  margin-top: 10px;
+}
+
+.slide .title-slide h1{
+  font-size: 55px;
+}
+
+.slide .title-slide p{
+  font-size: 30px;
+}
+
+
+.slide hr{
+  width: 50%;
+  height: 5px;
+  background: #000;
+  margin: 10px auto;
+  border: none;
+}
+
+.milk-tea .tieude1-1{
+  margin: 30px auto;
+  text-align: center;
+}
+
+
+.milk-tea .tieude-1 .tieude1-1 p{
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.milk-tea .tieude-1 .tieude1-1 hr{
+    width: 60%;
+    margin-top: 20px;
+    height: 5px;
+    border: none;
+    background: #333;
+}
+
+.milk-tea .menu-milktea{
+  display: grid;
+  
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.milk-tea .menu-milktea .card{
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  transition: 0.5s;
+}
+
+.milk-tea .menu-milktea .card .image-1{ 
+display: grid;
+grid-template-columns: 5fr 0.5fr;
+}
+
+.milk-tea .menu-milktea .card:hover{
+transform: scale(1.04);
+transition: 0.5s;
+}
+
+.milk-tea .menu-milktea .card .detail h4 span{
+color: red;
+
+}
+
+
+
+.milk-tea .menu-milktea .card .detail{
+text-align: center;
+/* margin-top: 20px; */
+/* margin: 0 auto; */
+margin-right: 30px;
+}
+
+.milk-tea .menu-milktea .card .detail  h2{
+margin: 10px 0;
+margin-bottom: 10px;
+font-size: 20px;
+}
+.milk-tea .menu-milktea .card .detail  h2 i{
+color: brown;
+}
+
+.milk-tea .menu-milktea .card .detail  p{
+font-size: 20px;
+margin-bottom: 10px;
+}
+
+.milk-tea .menu-milktea .card .detail h4{
+margin-bottom: 20px;
+}
+
+.milk-tea .menu-milktea .card .image-1 img{
+width: 100%;
+height: 300px;
+object-fit: cover ;  
+display: flex;
+border-radius: 5px;
+}
+
+ .card .image-1 .i{
+margin-top: 80px;
+opacity: 0;
+transform: translateX(-40px);
+transition: 0.2s;
+z-index: 0;
+}
+
+ .card .image-1 .i .div-1{
+  width: 40px;
+  height: 40px;
+  border: 3px solid #333;
+  text-align: center;
+  background: rgb(0, 0, 0);
+  color: #fff;
+}
+
+ .card:hover .image-1 .i{
+opacity: 1;
+transform: translate(0);
+transition: 0.2s;
+}
+
+ .card .image-1 .i .div-1:hover{
+background: #fff;
+color: #000;
+cursor: pointer;
+transition: 0.5s;
+}
+
+ .card .image-1 .i .div-1 i{
+  margin: 10px 0;
+}
+
+ .card .image-1{
+margin: 0 auto;
+width: 80%;
+}
+
+ .card:hover .detail p{
+color: chocolate;
+}
+
+ .card:hover .image-1 img{
+border: 2px solid rgb(0, 0, 0);
+border-radius: 10px;
+}
+
+.milk-tea .button{
+display: flex;
+justify-content: center;
+margin-bottom: 20px;
+}
+
+
+
+
+
+@media (max-width:1100px){
+  .coffee .menu-coffee{
+    display: grid;
+    
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .milk-tea .menu-milktea{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+@media (max-width:800px){
+  .coffee .menu-coffee{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .milk-tea .menu-milktea{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .card{
+    margin: 20px auto !important;
+  }
+}
+
